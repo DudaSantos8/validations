@@ -19,7 +19,7 @@ Validações esperadas:
   - É obrigatório
   - Deve conter no minimo 2 palavras (considerar que estão separadas por espaço)
   - Não pode estar em branco, exemplo " "
-- age:
+- age: -> OK
   - é obrigatório
   - Deve ser maior de 18 anos
   - Deve ser menor do que 110 anos
