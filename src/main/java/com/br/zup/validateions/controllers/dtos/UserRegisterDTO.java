@@ -2,7 +2,11 @@ package com.br.zup.validateions.controllers.dtos;
 
 import jakarta.validation.constraints.*;
 
+import java.time.LocalDate;
+
 public class UserRegisterDTO {
+
+    private LocalDate now;
 
     @NotBlank(message = "This field cant be blank")
     @NotNull(message = "This field cant be null")
@@ -14,15 +18,20 @@ public class UserRegisterDTO {
     @Max(value = 110, message = "You cant have more than 110 years old")
     private int age;
 
-
+    @Past(message = "test")
     private int yearOfBirth;
 
     @NotBlank(message = "This field cant be blank")
     @NotNull(message = "This field cant be null")
-    @Pattern(regexp = "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+).(\\.[a-z]{2,3})$", message = "This format of email is not valid")
+    @Pattern(regexp = "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+).(\\.[a-z]{2,3})$",
+            message = "This format of email is not valid")
     private String email;
 
     public UserRegisterDTO() {
+    }
+
+    public int getNow(){
+        return now.getDayOfYear();
     }
 
     public String getName() {
