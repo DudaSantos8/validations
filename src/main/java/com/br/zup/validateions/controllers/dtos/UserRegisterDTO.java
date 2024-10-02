@@ -1,7 +1,16 @@
 package com.br.zup.validateions.controllers.dtos;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+
 public class UserRegisterDTO {
+
+    @NotBlank(message = "This field cant be blank")
+    @NotNull(message = "This field cant be null")
+    @Pattern(regexp = "[A-Za-z]+\\s[A-Za-z]+", message = "Need be name and lastname")
     private String name;
+
     private int age;
     private int yearOfBirth;
     private String email;

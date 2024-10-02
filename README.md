@@ -15,7 +15,7 @@ Json esperado
 ````
 
 Validações esperadas: 
-- name: 
+- name: -> OK
   - É obrigatório
   - Deve conter no minimo 2 palavras (considerar que estão separadas por espaço)
   - Não pode estar em branco, exemplo " "

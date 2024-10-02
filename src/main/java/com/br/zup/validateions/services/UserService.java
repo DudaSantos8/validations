@@ -16,7 +16,7 @@ public class UserService {
 
 
     public UserDTO save(UserRegisterDTO userRegisterDTO){
-        log.info("Registou");
+        log.info("Registrou");
         UserDTO userDTO =  UserMapper.toUserDTO(userRegisterDTO);
         userDTO.setId(UUID.randomUUID());
         return userDTO;
