@@ -14,10 +14,12 @@ public class UserRegisterDTO {
     @Max(value = 110, message = "You cant have more than 110 years old")
     private int age;
 
+
     private int yearOfBirth;
 
     @NotBlank(message = "This field cant be blank")
     @NotNull(message = "This field cant be null")
+    @Pattern(regexp = "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+).(\\.[a-z]{2,3})$", message = "This format of email is not valid")
     private String email;
 
     public UserRegisterDTO() {
